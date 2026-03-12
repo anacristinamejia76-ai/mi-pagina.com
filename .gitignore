@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de ropa. Tu tienda de ropa</title>
+<link rel="stylesheet" href="ejemplo11.css">
+
+
+</head>
+<body>
+    
+<header id="main-header">
+<h1>Primavera</h1>
+<nav id="navbar">
+    <ul>
+         <li><a href="#about">Nuestros</a></li>
+           <li><a href="#products">Prendas</a></li>
+        <li><a href="#contact">Contacto</a></li>
+</nav>
+</header>
+
+<main>
+    <section id="mission-vision" class="container"></section>
+        <h2>Bienvenidos a nuestra tienda</h2>
+        <p>En nuestra tienda encontraran todo tipo y diseño de prendas, hay todo tipo de diseños en el catalogo</p>
+    </section>
+
+<section id="about" class="container">
+    <div class="box">
+        <h3>Nuestra meta</h3>
+        <p>Proveer la mejor ropa de calidad para nuestros clientes,  precios accesibles y justos </p>
+    </div>
+</section>
+
+<section id="products" class="container">
+    <h2>Algunas muestras de nuestros productos</h2>
+<div class="gallery-grid">
+ 
+             <article class="product-card">
+             <img src="./unnamed.jpg" alt="conjunto">
+             <span class="brand">Conjunto</span>
+             <h3>Conjunto</h3>
+             <p>Conjunto todo incluido</p>
+              <p class="price">$1,499</p>
+              <button class="btn-cart">Añadir al carro 🛒</button>
+             </article>
+
+                <article class="product-card">
+                    <img src="./unnamed (1).jpg" alt="conjunto">
+                    <span class="brand"></span>
+                    <h3>Conjunto</h3>
+                    <p>Conjunto estilo varguandista</p>
+                    <p class="price">$69.9</p>
+                    <button class="btn-cart">🛒 Añadir al carrito</button>
+                 </article>
+
+                <article class="product-card">
+                    <img src="./unnamed (2).jpg" alt="conjunto">
+                    <h3>Conjunto</h3>
+                    <p>Conjunto de verano con accesorios incluido</p>
+                    <p class="price">$28.25</p>
+                    <button class="btn-cart">🛒 Añadir al carrito</button>
+                </article>
+
+                <article class="product-card">
+                    <img src="./unnamed (3).jpg" alt="conjunto">
+                     <h3>Conjunto</h3>
+                    <p>Conjunto de verano con accesorios incluido</p>
+                    <p class="price">$15.18</p>
+                    <button class="btn-cart">🛒 Añadir al carrito</button>
+                </article>
+
+                <article class="product-card">
+                    <img src="./unnamed (4).jpg" alt="conjunto">
+                      <h3>Conjunto</h3>
+                    <p>Conjunto de verano con accesorios incluido</p>
+                    <p class="price">$8.20</p>
+                    <button class="btn-cart">🛒 Añadir al carrito</button>
+                </article>
+            </div>
+         </section>
+
+    <section id="contact" class="container">
+    <h2>Contactanos</h2>
+  <form action="#" class="contact-form">
+                <label for="name">Nombre Completo:</label>
+                <input type="text" id="name" placeholder="Ej. Hector Gonzales" required>
+
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" placeholder="tu@correo.com" required>
+
+                <label for="message">Tu Mensaje:</label>
+                <textarea id="message" rows="4" placeholder="¿En qué podemos ayudarte?" required></textarea>
+
+                <button type="submit" class="btn-submit">Enviar Mensaje</button>
+            </form>
+        </section>
+    </main>
+
+    <footer id="main-footer">
+        <p>&copy; 2026 TechStore El Salvador. Todos los derechos reservados.</p>
+        <p style="color: rgb(38, 44, 44);">Diseñado con 💻 y ☕ por un experto en web.</p>
+    </footer>
+
+</body>
+</html>
+
+/* --- Reset Básico y Tipografía --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: hsl(177, 42%, 46%);
+}
+
+/* Clases utilitarias */
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2f3a46;
+}
+
+/* --- Encabezado y Menú Horizontal --- */
+#main-header {
+    background-color: #3b4d52;
+    color: #90c1cc;
+    padding: 20px;
+    text-align: center;
+}
+
+#navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 15px;
+}
+
+#navbar a {
+    color: rgb(102, 179, 134);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+#navbar a:hover {
+    color: #826f8a;
+}
+
+/* --- Descripción del Negocio --- */
+#about {
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* --- Misión y Visión (Flexbox) --- */
+#mission-vision {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Se adapta a móviles */
+}
+
+.box {
+    background: #ffffff;
+    flex: 1; /* Ocupan el mismo ancho */
+    min-width: 300px;
+    padding: 25px;
+    border-radius: 10px;
+    border-top: 5px solid #41a383;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.box h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+/* --- Galería de Productos (Grid/Flexbox) --- */
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.product-card {
+    background: white;
+    width: 250px;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.brand {
+    font-size: 0.8rem;
+    color: #7f8c8d;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.product-card h3 {
+    font-size: 1.2rem;
+    margin: 5px 0;
+}
+
+.product-card p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 15px;
+    height: 60px; /* Mantiene la misma altura en todas las tarjetas */
+}
+
+.price {
+    font-size: 1.4rem !important;
+    font-weight: bold;
+    color: #64bba8 !important;
+}
+
+/* --- Botones --- */
+.btn-cart, .btn-submit {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-cart:hover, .btn-submit:hover {
+    background-color: #8fc0a3;
+}
+
+/* --- Formulario de Contacto --- */
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.contact-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: 15px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+/* --- Pie de Página --- */
+#main-footer {
+    background-color: #1a1a1a;
+    color: #aaa;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
